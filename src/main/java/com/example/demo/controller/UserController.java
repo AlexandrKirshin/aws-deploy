@@ -4,6 +4,7 @@ package com.example.demo.controller;
 import com.example.demo.domain.User;
 import com.example.demo.service.UserServiceImpl;
 import java.time.LocalDateTime;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,9 +17,9 @@ public class UserController {
 
 
   @GetMapping("/users")
-  public String showUsersList() {
+  public List<User> showUsersList() {
 
-    return userService.getAll().toString();
+    return userService.getAll();
   }
 
   @GetMapping("/add-user")
