@@ -1,0 +1,9 @@
+server:
+    port: 5000
+
+spring:
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://aa191fjmbb0776.cghjrxrq3dui.eu-central-1.rds.amazonaws.com:5432/ebdb
+      username: ${DATABASE_USER_NAME}
+      password: ${DATABASE_PASSWORD}
